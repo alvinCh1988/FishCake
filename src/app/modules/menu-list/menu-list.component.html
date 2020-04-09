@@ -1,50 +1,50 @@
 <div class="container">
   <!-- <div class="row"> -->
 
-    <table class="table">
-      <thead>
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col">口味</th>
-          <th scope="col">價格</th>
-          <th scope="col" style="text-align: center;">數量</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let item of menuList; index as i">
-          <th scope="row">{{ i+1 }}</th>
-          <td>{{ item.name }}</td>
-          <td>{{ item.price }}</td>
-          <td>
-            <app-quantity (count)="addCount(item.name ,$event)"></app-quantity>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">口味</th>
+        <th scope="col">價格</th>
+        <th scope="col" style="text-align: center;">數量</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of menuList; index as i">
+        <th scope="row">{{ i+1 }}</th>
+        <td>{{ item.name }}</td>
+        <td>{{ item.price }}</td>
+        <td>
+          <app-quantity (count)="addCount(item.name ,$event)"></app-quantity>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 
-    <i class="fas fa-plus-circle fa-9x"></i>
-    <i class="fas fa-plus-circle fa-3x"></i>
-    
-    <button type="button" class="btn btn-info btn-lg btn-block" (click)="openModal(template)">送出!!!</button>
+  <!-- <i class="fas fa-plus-circle fa-9x"></i>
+    <i class="fas fa-plus-circle fa-3x"></i> -->
 
-    <ng-template #template>
-      <div class="modal-header">
-        <h4 class="modal-title pull-left">確認本次訂單數量</h4>
-        <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <ng-container *ngFor="let item of menuList; index as i">
-          <span>
-            <h4>【{{ item.name }}】&nbsp;&nbsp; 數量: {{ item.quantity }} &nbsp;&nbsp; 金額: {{ item.amount }}</h4>
-          </span>
-        </ng-container>
-        <hr>
-        <h2>總金額：{{ totalAmount }} $</h2>
-        
-      </div>
-    </ng-template>
+  <button type="button" class="btn btn-info btn-lg btn-block" (click)="openModal(template)">送出</button>
+
+  <ng-template #template>
+    <div class="modal-header">
+      <h4 class="modal-title pull-left">確認本次訂單數量</h4>
+      <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <ng-container *ngFor="let item of menuList; index as i">
+        <span>
+          <h4>【{{ item.name }}】&nbsp;&nbsp; 數量: {{ item.quantity }} &nbsp;&nbsp; 金額: {{ item.amount }}</h4>
+        </span>
+      </ng-container>
+      <hr>
+      <h2>總金額：{{ totalAmount }} $</h2>
+
+    </div>
+  </ng-template>
 
   <!-- </div> -->
 </div>
