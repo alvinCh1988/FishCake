@@ -8,9 +8,10 @@ import { AppComponent } from './app.component';
 
 import { MenuListComponent } from './modules/menu-list/menu-list.component';
 import { UiTestComponent } from './modules/ui-test/ui-test.component';
-import { QuantityComponent } from './component/quantity/quantity.component';
+import { QuantityRegisterComponent } from './ui-customize/quantity-register/quantity-register.component';
 
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { TableTbody001Component } from './ui-customize/table-tbody001/table-tbody001.component';
 
 
 @NgModule({
@@ -18,11 +19,12 @@ import { ModalModule } from 'ngx-bootstrap/modal';
     AppComponent,
     MenuListComponent,
     UiTestComponent,
-    QuantityComponent,
+    QuantityRegisterComponent,
+    TableTbody001Component,
   ],
   imports: [
     FormsModule,
-    BrowserModule.withServerTransition({ appId: 'serverApp' }),
+    BrowserModule,
     AppRoutingModule,
     RouterModule,
     ModalModule.forRoot(),

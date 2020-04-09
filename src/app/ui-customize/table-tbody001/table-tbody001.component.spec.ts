@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { QuantityComponent } from './quantity.component';
+import { TableTbody001Component } from './table-tbody001.component';
 
-describe('QuantityComponent', () => {
-  let component: QuantityComponent;
-  let fixture: ComponentFixture<QuantityComponent>;
+describe('TableTbody001Component', () => {
+  let component: TableTbody001Component;
+  let fixture: ComponentFixture<TableTbody001Component>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ QuantityComponent ]
+      declarations: [ TableTbody001Component ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(QuantityComponent);
+    fixture = TestBed.createComponent(TableTbody001Component);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -12,16 +12,16 @@ export class MenuListComponent implements OnInit {
   public totalAmount = 0;
 
   public menuList = [
-    { name: '原味', price: 45, quantity: 0, amount: 0  },
-    { name: '巧克力', price: 50, quantity: 0, amount: 0  },
-    { name: '草莓', price: 50, quantity: 0, amount: 0  },
-    { name: '抹茶', price: 50, quantity: 0, amount: 0  },
-    { name: '黑糖', price: 50, quantity: 0, amount: 0  },
+    { name: '原味', price: 45, quantity: 0, amount: 0 },
+    { name: '巧克力', price: 50, quantity: 0, amount: 0 },
+    { name: '草莓', price: 50, quantity: 0, amount: 0 },
+    { name: '抹茶', price: 50, quantity: 0, amount: 0 },
+    { name: '黑糖', price: 50, quantity: 0, amount: 0 },
   ];
 
   constructor(
     private modalService: BsModalService,
-    ) { }
+  ) { }
 
   ngOnInit() {
   }
@@ -35,7 +35,7 @@ export class MenuListComponent implements OnInit {
     });
   }
 
-  public openModal(template: any) {
+  public confirmQuantity(template: any) {
     this.sumAmount();
     this.modalRef = this.modalService.show(template);
   }

@@ -1,11 +1,11 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'app-quantity',
-  templateUrl: './quantity.component.html',
-  styleUrls: ['./quantity.component.scss']
+  selector: 'ui-quantity-register',
+  templateUrl: './quantity-register.component.html',
+  styleUrls: ['./quantity-register.component.scss']
 })
-export class QuantityComponent implements OnInit {
+export class QuantityRegisterComponent implements OnInit {
 
   @Output() count = new EventEmitter();
 
@@ -23,10 +23,10 @@ export class QuantityComponent implements OnInit {
     const quantity = this.quantity;
 
     if (quantity !== this.maxNum && '+' === value) {
-      this.quantity ++;
+      this.quantity++;
     }
-    if ( quantity !== this.minNum && '-' === value) {
-      this.quantity --;
+    if (quantity !== this.minNum && '-' === value) {
+      this.quantity--;
     }
 
     this.count.emit(this.quantity);
