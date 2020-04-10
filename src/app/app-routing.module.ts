@@ -1,13 +1,18 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { MenuListComponent } from './modules/menu-list/menu-list.component';
 import { UiTestComponent } from './modules/ui-test/ui-test.component';
+import { MenuComponent } from './modules/menu/menu.component';
+import { OrderComponent } from './modules/order/order.component';
 
 
 const routes: Routes = [
   {
-    path: 'menuList',
-    component: MenuListComponent
+    path: 'menu',
+    component: MenuComponent
+  },
+  {
+    path: 'order',
+    component: OrderComponent
   },
   {
     path: 'ui',
@@ -15,12 +20,12 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: '/menuList',
+    redirectTo: '/order',
     pathMatch: 'full',
   },
   {
     path: '**',
-    redirectTo: '/menuList',
+    redirectTo: '/order',
     pathMatch: 'full'
   }
 ];

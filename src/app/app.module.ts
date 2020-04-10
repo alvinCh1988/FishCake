@@ -6,21 +6,23 @@ import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { MenuListComponent } from './modules/menu-list/menu-list.component';
+import { MenuComponent } from './modules/menu/menu.component';
 import { UiTestComponent } from './modules/ui-test/ui-test.component';
 import { QuantityRegisterComponent } from './ui-customize/quantity-register/quantity-register.component';
 
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { TableTbody001Component } from './ui-customize/table-tbody001/table-tbody001.component';
+import { OrderComponent } from './modules/order/order.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    MenuListComponent,
+    MenuComponent,
     UiTestComponent,
     QuantityRegisterComponent,
     TableTbody001Component,
+    OrderComponent,
   ],
   imports: [
     FormsModule,

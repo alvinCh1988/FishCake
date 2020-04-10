@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 
 @Component({
-  selector: 'app-menu-list',
-  templateUrl: './menu-list.component.html',
-  styleUrls: ['./menu-list.component.scss']
+  selector: 'app-menu',
+  templateUrl: './menu.component.html',
+  styleUrls: ['./menu.component.scss']
 })
-export class MenuListComponent implements OnInit {
+export class MenuComponent implements OnInit {
 
   public modalRef: BsModalRef;
   public totalAmount = 0;

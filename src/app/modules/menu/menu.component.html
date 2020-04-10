@@ -27,7 +27,11 @@
   <!-- <img src="assets/img/hello_128.ico">
   <img src="assets/img/hello_96.ico">
   <img src="assets/img/hello_64.ico"> -->
-  <button type=" button" class="btn btn-info btn-lg btn-block" (click)="confirmQuantity(template)">送出</button>
+  <br>
+  <br>
+  <br>
+  <br>
+  <button type=" button" class="btn btn-success btn-lg btn-block btn-cus" (click)="confirmQuantity(template)">送出</button>
 
   <ng-template #template>
     <div class="modal-header">
@@ -37,7 +41,7 @@
       </button>
     </div>
     <div class="modal-body">
-      <table-tbody001 [dataList]="menuList"></table-tbody001>
+      <!-- <table-tbody001 [dataList]="menuList"></table-tbody001> -->
       <table class="table table-borderless">
         <tbody>
           <tr *ngFor="let item of menuList">
