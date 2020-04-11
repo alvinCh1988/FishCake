@@ -4,13 +4,11 @@
     <div class="card">
       <div class="card-body">
         <h5 class="card-title">訂單編號: 0001</h5>
-        <div>原味: 0  巧克力: 0  草莓: 0  抹茶: 0  黑糖: 0</div>
-        <!-- <div>原味: 0  </div>
-          <div>巧克力: 0  </div>
-          <div>草莓: 0  </div>
-          <div>抹茶: 0  </div>
-          <div>黑糖: 0  </div> -->
 
+        <ng-container *ngFor="let item of orderList">
+          <span class="span-brand" [ngStyle]="{'color': item.color}"><strong>【{{ item.name }} : {{ item.quantity }}】</strong></span>
+        </ng-container>
+    
         <button type="button" class="btn btn-secondary" style="float: right;">結單</button>
       </div>
     </div>
